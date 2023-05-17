@@ -1,5 +1,7 @@
 .timeline-wrapper {
+    position: relative;
     overflow-x: hidden;
+    margin: 0 auto;
 }
 
 .vertical-timeline-element-icon {
@@ -55,7 +57,11 @@
     border-right: 7px solid navy !important;
 }
 
-.vertical-timeline-element-content:hover h3, .vertical-timeline-element-content:hover h4, .vertical-timeline-element-content:hover p, .vertical-timeline-element-content:hover ul, .vertical-timeline-element-content:hover p.a {
+.vertical-timeline-element-content:hover h3, 
+.vertical-timeline-element-content:hover h4, 
+.vertical-timeline-element-content:hover p, 
+.vertical-timeline-element-content:hover ul, 
+.vertical-timeline-element-content:hover p.a {
     color: navy;
 }
 
