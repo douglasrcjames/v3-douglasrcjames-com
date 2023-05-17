@@ -1,7 +1,7 @@
 
-import './globals.css'
-import Footer from './Footer'
-import Header from './Header'
+import './styles/globals.css'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 export const metadata = {
     title: 'Douglas RC James',

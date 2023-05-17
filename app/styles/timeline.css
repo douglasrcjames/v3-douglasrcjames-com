@@ -1,0 +1,90 @@
+.timeline-wrapper {
+    overflow-x: hidden;
+}
+
+.vertical-timeline-element-icon {
+    -webkit-box-shadow: 0 0 0 4px navy, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05) !important;
+    box-shadow: 0 0 0 4px navy, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05) !important;
+}
+
+.vertical-timeline-element-date {
+    color: darkblue;
+    opacity: 1 !important;
+    pointer-events:none;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    display: inline;
+}
+
+.vertical-timeline-element-content {
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.25s linear;
+}
+
+.vertical-timeline-element-content p.a {
+    color: white;
+}
+
+.vertical-timeline-element-content p.a:hover {
+    color: gold !important;
+}
+
+.vertical-timeline-element-content span.status-icon {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    display: block;
+    font-size: 16px;
+}
+.vertical-timeline-element-content span.view-btn {
+    display: none;
+}
+
+.vertical-timeline-element-content:hover {
+    background-color: white !important;
+    border: 2px navy solid;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.vertical-timeline-element-content:hover .vertical-timeline-element-content-arrow {
+    border-right: 7px solid navy !important;
+}
+
+.vertical-timeline-element-content:hover h3, .vertical-timeline-element-content:hover h4, .vertical-timeline-element-content:hover p, .vertical-timeline-element-content:hover ul, .vertical-timeline-element-content:hover p.a {
+    color: navy;
+}
+
+.vertical-timeline-element-content:hover span.view-btn {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: darkgreen !important;
+    display: block;
+    font-size: 16px;
+    transition: font-size 0.1s linear;
+}
+
+.vertical-timeline-element-content:hover span.view-btn:hover {
+    font-size: 20px;
+}
+
+.vertical-timeline-element-content:hover span.status-icon { 
+    display: none;
+}
+
+@media screen and (max-width: 1169px) {
+    .vertical-timeline-element-date {
+        color: white;
+        background-color: transparent;
+    }
+
+    .vertical-timeline-element-content:hover .vertical-timeline-element-date {
+        color: navy;
+        background-color: transparent;
+    }
+}
