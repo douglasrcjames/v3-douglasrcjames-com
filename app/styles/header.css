@@ -1,0 +1,60 @@
+nav {
+    position: relative;
+    z-index: 5;
+    margin: 10px 20px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 0 0.5rem 0.8rem;
+    vertical-align: middle;
+    /* margin: 20px; */
+}
+
+/* On Hover */
+.nav-link:hover:after {
+    content: "";
+    background: #31445E;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 75%;
+    width: 2px;
+    border-radius: 4px;
+}
+
+.nav-link:hover:before {
+    content: "";
+    background: #31445E;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 75%;
+    border-radius: 4px;
+}
+
+/* Active */
+.nav-link-active:after {
+    content: "";
+    background: #31445E;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 75%;
+    width: 2px;
+    border-radius: 4px;
+}
+
+.nav-link-active:before {
+    content: "";
+    background: #31445E;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    height: 2px;
+    border-radius: 4px;
+}

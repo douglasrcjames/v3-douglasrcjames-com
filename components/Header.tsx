@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 // import { useState } from 'react';
 import { usePathname } from 'next/navigation';
+import '../app/styles/header.css'
 
 export default function Header() {
 //   const [burgerExpanded, setBurgerExpanded] = useState(false);
@@ -12,10 +13,6 @@ export default function Header() {
     const root = "/";
 
     const navLinks = [
-        {
-            name: "Home",
-            href: root,
-        },
         {
             name: "Work",
             href: `${root}work`,
@@ -29,32 +26,33 @@ export default function Header() {
             href: `${root}dashboard`,
         },
     ];
+    console.log("pathname: " + pathname);
 
     return (
         <header>
-            <nav className="text-center my-5">
-                <div>
-                    <Image
+            <nav>
+                    {/* <Image
                         src="/logo512.png"
                         width="100"
                         height="100"
                         alt="Douglas RC James Logo"
-                        className="mx-auto"
-                    />
-                    <h1>LOGO</h1>
-                </div>
-                <div className="my-2">
+                    /> */}
+                    
+                <Link href="/" className={pathname === "/" ? "nav-link-active" : "nav-link"}>
+                    Douglas R.C. James
+                </Link>
+                <div className="float-right text-right">
                     {
                         navLinks.map((link, l) => {
-                            const activeClassName = (
-                                (pathname === link.href) || (pathname.startsWith(link.href) && link.href !== root)
-                            ) ? 
-                            "mx-5 text-blue-500 font-bold"
-                            : 
-                            "mx-5";
+                            let linkClass = "";
+                            if ((pathname === link.href) || (pathname.startsWith(link.href) && link.href !== root)) {
+                                linkClass = "nav-link mx-2";
+                            } else {
+                                linkClass = "nav-link-active mx-2";
+                            }
 
                             return (
-                                <span key={l} className={activeClassName}>
+                                <span key={l} className={linkClass}>
                                     <Link href={link.href}>{link.name}</Link>
                                 </span>
                             )

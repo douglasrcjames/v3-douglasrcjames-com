@@ -54,25 +54,25 @@ export default function Work() {
     ]
     return (
         <main>
-            <div className="w-full bg-blue">
-                <div className="container p-20">
+            <div className="w-full bg-primary">
+                <div className="container p-20 text-white">
                     <h1>Work</h1>
                     <p>I am a web developer, computer technician, and an entrepreneur with a lifelong dream to build great products. I have broken down my relevant work into chronological order below, with a detailed view for each job on tap.</p>
                 </div>
             </div>
             {/* <div className={styles.timelineWrapper}> */}
             <div className="timeline-wrapper">
-                <VerticalTimeline lineColor="navy">
+                <VerticalTimeline lineColor="#202D3E">
                     {
                         jobs.map((job, i) => { 
                             return (
                                 <VerticalTimelineElement
                                     key={i}
                                     className="vertical-timeline-element"
-                                    contentStyle={{ background: 'navy', color: '#fff' }}
-                                    contentArrowStyle={{ borderRight: '7px solid  navy' }}
+                                    contentStyle={{ background: '#202D3E', color: '#fff' }}
+                                    contentArrowStyle={{ borderRight: '7px solid #202D3E' }}
                                     date={job.period}
-                                    iconStyle={{ background: job.status === STATUS.COMPLETE ? 'navy' : '#fff', color: job.status === STATUS.COMPLETE ? '#fff' : 'navy' }}
+                                    iconStyle={{ background: job.status === STATUS.COMPLETE ? '#202D3E' : '#fff', color: job.status === STATUS.COMPLETE ? '#fff' : '#202D3E' }}
                                     icon={job.icon}
                                     onTimelineElementClick={() => router.push(`/work/${job.id}`)}
                                     // onTimelineElementClick={() => this.props.history.push(`/work/${job.title.split(" ").join("-").toLowerCase()}`)}
@@ -81,7 +81,7 @@ export default function Work() {
                                     <h4 className="vertical-timeline-element-subtitle m-0">{job.role}</h4>
                                     <p>{job.description.short}</p>
                                     <span className="view-btn">View</span>
-                                    <span className={`status-icon ${job.status === STATUS.COMPLETE ? 'green' : 'yellow'}`}>{job.status === STATUS.COMPLETE ? <FaCheck /> : <FaClock />}</span>
+                                    <span className={`status-icon ${job.status === STATUS.COMPLETE ? 'text-green-500' : 'text-yellow-500'}`}>{job.status === STATUS.COMPLETE ? <FaCheck /> : <FaClock />}</span>
                                 </VerticalTimelineElement>
                             )
                         })

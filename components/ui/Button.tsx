@@ -22,7 +22,7 @@ const Button: React.FC<Props> = ({
   return (
     <button 
         onClick={onClick}
-        className="px-8 py-2 bg-blue-500 text-white rounded border-2 border-blue-500 hover:bg-transparent hover:text-blue-500"
+        className="px-8 py-2 bg-primary text-white rounded border-2 cursor-pointer border-primary hover:bg-transparent hover:text-primary"
         style={{
             // backgroundColor: color,
             // border,

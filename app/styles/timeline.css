@@ -5,12 +5,12 @@
 }
 
 .vertical-timeline-element-icon {
-    -webkit-box-shadow: 0 0 0 4px navy, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05) !important;
-    box-shadow: 0 0 0 4px navy, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05) !important;
+    -webkit-box-shadow: 0 0 0 4px #202D3E, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05) !important;
+    box-shadow: 0 0 0 4px #202D3E, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05) !important;
 }
 
 .vertical-timeline-element-date {
-    color: darkblue;
+    color: #202D3E;
     opacity: 1 !important;
     pointer-events:none;
     position: relative;
@@ -46,7 +46,7 @@
 
 .vertical-timeline-element-content:hover {
     background-color: white !important;
-    border: 2px navy solid;
+    border: 2px #202D3E solid;
     -webkit-box-shadow: none;
     box-shadow: none;
     position: relative;
@@ -54,7 +54,7 @@
 }
 
 .vertical-timeline-element-content:hover .vertical-timeline-element-content-arrow {
-    border-right: 7px solid navy !important;
+    border-right: 7px solid #202D3E !important;
 }
 
 .vertical-timeline-element-content:hover h3, 
@@ -62,7 +62,7 @@
 .vertical-timeline-element-content:hover p, 
 .vertical-timeline-element-content:hover ul, 
 .vertical-timeline-element-content:hover p.a {
-    color: navy;
+    color: #202D3E;
 }
 
 .vertical-timeline-element-content:hover span.view-btn {
@@ -90,7 +90,7 @@
     }
 
     .vertical-timeline-element-content:hover .vertical-timeline-element-date {
-        color: navy;
+        color: #202D3E;
         background-color: transparent;
     }
 }
